@@ -1,5 +1,15 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  let seen = {}; // hash set
+
+  for (let num of arr) {
+    if (seen[num]) {
+      return num; // first duplicate found
+    } else {
+      seen[num] = true; // mark num as seen
+    }
+  }
+
+  return -1; // no duplicate found
 }
 
 if (require.main === module) {
