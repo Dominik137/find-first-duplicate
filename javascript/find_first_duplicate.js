@@ -2,10 +2,17 @@ function findFirstDuplicate(arr) {
   let seen = {}; // hash set
 
   for (let num of arr) {
+    // loop through the array
+
     if (seen[num]) {
+      // check the seen object if the number is already there
+
       return num; // first duplicate found
+      // if the number is already in the seen obj then we return that
+      // effectivly returning the first duplicate
     } else {
       seen[num] = true; // mark num as seen
+      // if the number isn't there then we add it to the seen obj
     }
   }
 
